@@ -5,7 +5,7 @@ import GameLogic from "../gameLogic";
 
 function Grid(props) {
   useEffect(() => {
-    const handleKeyDown = e => {
+    const handleKeyDown = (e) => {
       e.preventDefault();
 
       if (props.status !== "running" && props.status !== "continue") return;
@@ -34,6 +34,7 @@ function Grid(props) {
           );
           break;
         default:
+          alert("Invalid key");
       }
 
       if (props.status !== "continue" && GameLogic.has2048(result.transform)) {

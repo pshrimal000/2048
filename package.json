@@ -1,7 +1,7 @@
 {
   "name": "2048-react-clone",
   "version": "1.0.0",
-  "description": "A react clone of 2048. Originally created by Gabriele Cirulli. Based on 1024 by Veewo Studio and conceptually similar to Threes by Asher Vollmer.",
+  "description": "A react clone of 2048. Originally created by Ashutosh Shrimal",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
@@ -11,13 +11,17 @@
     "react-scripts": "2.1.8"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "typescript": "3.3.3"
   },
+  "homepage": "https://pshrimal000.github.io/2048/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
